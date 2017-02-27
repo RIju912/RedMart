@@ -14,6 +14,8 @@
 		8BB35E6F1E63CD270033F4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E6D1E63CD270033F4E3 /* LaunchScreen.storyboard */; };
 		8BB35E7A1E63CD270033F4E3 /* RedMartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E791E63CD270033F4E3 /* RedMartTests.swift */; };
 		8BB35E851E63CD270033F4E3 /* RedMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E841E63CD270033F4E3 /* RedMartUITests.swift */; };
+		8BB35E931E63CEF80033F4E3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E921E63CEF80033F4E3 /* README.md */; };
+		8BB35E961E63CFBA0033F4E3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E951E63CFBA0033F4E3 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +37,20 @@
 
 /* Begin PBXFileReference section */
 		8BB35E611E63CD270033F4E3 /* RedMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB35E641E63CD270033F4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BB35E641E63CD270033F4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		8BB35E661E63CD270033F4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BB35E691E63CD270033F4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		8BB35E6E1E63CD270033F4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8BB35E701E63CD270033F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB35E701E63CD270033F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8BB35E751E63CD270033F4E3 /* RedMartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedMartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB35E791E63CD270033F4E3 /* RedMartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedMartTests.swift; sourceTree = "<group>"; };
 		8BB35E7B1E63CD270033F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB35E801E63CD270033F4E3 /* RedMartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedMartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB35E841E63CD270033F4E3 /* RedMartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedMartUITests.swift; sourceTree = "<group>"; };
 		8BB35E861E63CD270033F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB35E921E63CEF80033F4E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8BB35E951E63CFBA0033F4E3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,10 @@
 		8BB35E631E63CD270033F4E3 /* RedMart */ = {
 			isa = PBXGroup;
 			children = (
-				8BB35E641E63CD270033F4E3 /* AppDelegate.swift */,
+				8BB35E941E63CFA40033F4E3 /* AppResources */,
 				8BB35E661E63CD270033F4E3 /* ViewController.swift */,
 				8BB35E681E63CD270033F4E3 /* Main.storyboard */,
-				8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */,
 				8BB35E6D1E63CD270033F4E3 /* LaunchScreen.storyboard */,
-				8BB35E701E63CD270033F4E3 /* Info.plist */,
 			);
 			path = RedMart;
 			sourceTree = "<group>";
@@ -123,6 +125,18 @@
 				8BB35E861E63CD270033F4E3 /* Info.plist */,
 			);
 			path = RedMartUITests;
+			sourceTree = "<group>";
+		};
+		8BB35E941E63CFA40033F4E3 /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				8BB35E951E63CFBA0033F4E3 /* .gitignore */,
+				8BB35E921E63CEF80033F4E3 /* README.md */,
+				8BB35E641E63CD270033F4E3 /* AppDelegate.swift */,
+				8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */,
+				8BB35E701E63CD270033F4E3 /* Info.plist */,
+			);
+			path = AppResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB35E961E63CFBA0033F4E3 /* .gitignore in Resources */,
 				8BB35E6F1E63CD270033F4E3 /* LaunchScreen.storyboard in Resources */,
 				8BB35E6C1E63CD270033F4E3 /* Assets.xcassets in Resources */,
 				8BB35E6A1E63CD270033F4E3 /* Main.storyboard in Resources */,
@@ -262,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB35E931E63CEF80033F4E3 /* README.md in Sources */,
 				8BB35E671E63CD270033F4E3 /* ViewController.swift in Sources */,
 				8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */,
 			);
