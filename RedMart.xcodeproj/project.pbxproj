@@ -18,6 +18,8 @@
 		8BB35E851E63CD270033F4E3 /* RedMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E841E63CD270033F4E3 /* RedMartUITests.swift */; };
 		8BB35E931E63CEF80033F4E3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E921E63CEF80033F4E3 /* README.md */; };
 		8BB35E961E63CFBA0033F4E3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E951E63CFBA0033F4E3 /* .gitignore */; };
+		8BB35E9C1E648D4B0033F4E3 /* RedMartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E9B1E648D4B0033F4E3 /* RedMartService.swift */; };
+		8BB35E9F1E649F0B0033F4E3 /* RedMartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E9E1E649F0B0033F4E3 /* RedMartDataSource.swift */; };
 		A9C4D8A94C5161B2068FAA5C /* libPods-RedMartUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9A917984BFF30D1BBE6D6B /* libPods-RedMartUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		8BB35E861E63CD270033F4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB35E921E63CEF80033F4E3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8BB35E951E63CFBA0033F4E3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8BB35E9B1E648D4B0033F4E3 /* RedMartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedMartService.swift; sourceTree = "<group>"; };
+		8BB35E9E1E649F0B0033F4E3 /* RedMartDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedMartDataSource.swift; sourceTree = "<group>"; };
 		C83327075350B7BDAE1972AB /* Pods-RedMart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedMart/Pods-RedMart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,8 @@
 		8BB35E631E63CD270033F4E3 /* RedMart */ = {
 			isa = PBXGroup;
 			children = (
+				8BB35E9D1E6494130033F4E3 /* Model */,
+				8BB35E9A1E648D1F0033F4E3 /* Service */,
 				8BB35E991E63D2F10033F4E3 /* ViewControllers */,
 				8BB35E981E63D2CB0033F4E3 /* Views and Storyboards */,
 				8BB35E941E63CFA40033F4E3 /* AppResources */,
@@ -180,6 +186,22 @@
 				8BB35E661E63CD270033F4E3 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BB35E9A1E648D1F0033F4E3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8BB35E9B1E648D4B0033F4E3 /* RedMartService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8BB35E9D1E6494130033F4E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BB35E9E1E649F0B0033F4E3 /* RedMartDataSource.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C1F87B2503740CDCF4FC82BB /* Pods */ = {
@@ -480,9 +502,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB35E9F1E649F0B0033F4E3 /* RedMartDataSource.swift in Sources */,
 				8BB35E931E63CEF80033F4E3 /* README.md in Sources */,
 				8BB35E671E63CD270033F4E3 /* ViewController.swift in Sources */,
 				8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */,
+				8BB35E9C1E648D4B0033F4E3 /* RedMartService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
