@@ -12,6 +12,8 @@ struct UrlConstants {
     
     static var productListAPI = "https://api.redmart.com/v1.5.7/catalog/search?theme=all-sales&"
     static var productImageAPI = "http://media.redmart.com/newmedia/200p"
+    static var notApplicable = "N/A"
+    static var notApplicableInteger = 0
     
 }
 

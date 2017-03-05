@@ -11,7 +11,9 @@ import SwiftyJSON
 import Alamofire
 import TRON
 
+
 class Service: NSObject{
+    
     
     private static var sharedService: Service = {
         
@@ -55,7 +57,7 @@ class Service: NSObject{
                 if let data = response.data {
                     
                     let jsonError:NSErrorPointer? = nil
-                    let json = JSON(data: data, options:JSONSerialization.ReadingOptions.allowFragments, error: jsonError!)
+                    let json = JSON(data: data, options:JSONSerialization.ReadingOptions.allowFragments, error: nil)
                     
                     if let jsonError = jsonError {
                         
@@ -64,14 +66,15 @@ class Service: NSObject{
                     }
                     else {
                         
-                        if let productList = json["products"].array {
+                        guard let productList = json["products"].array else{
+                            //print("Invalid Product List")
+                            return
+                        }
+                        
+                        for productJson in productList {
                             
-                            for productJson in productList {
-                                
-                                let product = RedMartAllSalesProducts(json: productJson)
-                                collection.redMartAllSalesProducts.append(product)
-                                
-                            }
+                            let product = RedMartAllSalesProducts(json: productJson)
+                            collection.redMartAllSalesProducts.append(product)
                             
                         }
                         
