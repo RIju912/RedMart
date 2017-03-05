@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class RedMartAllSalesProducts: NSObject{
     
+    //MARK: - Model Class Variables
     var id: String?
     var sku: String?
     var status: Int?
@@ -24,6 +25,7 @@ class RedMartAllSalesProducts: NSObject{
     var stockStatus: Int?
     var stockMeasure: String?
     
+    //MARK: - Init
     init(json: JSON){
         
         super.init()
@@ -107,6 +109,20 @@ class RedMartAllSalesProducts: NSObject{
             images = []
         }
         
-        
+    }
+    
+    //MARK: - Clear Data
+    func clear() {
+        id = ""
+        sku = ""
+        status = 0
+        title = ""
+        details = ""
+        coverImage = ""
+        images = []
+        lifeTime = ""
+        price = ""
+        stockStatus = 0
+        stockMeasure = ""
     }
 }

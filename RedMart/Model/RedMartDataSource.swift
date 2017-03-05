@@ -10,6 +10,7 @@ import Foundation
 
 class RedMartDataSource: NSObject {
     
+    //MARK: - Data Source
     var redMartAllSalesProducts = [RedMartAllSalesProducts]()
     var redMartAllSalesPagination = RedmartPagination()
     

@@ -9,12 +9,11 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
-import TRON
 
 
 class Service: NSObject{
     
-    
+    //MARK: - Shared Instance
     private static var sharedService: Service = {
         
         let networkManager = Service()
@@ -28,24 +27,24 @@ class Service: NSObject{
         
     }
     
-    func fetchProducts(_ completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+    //MARK: - Main API Call
+    func getAllSaleProducts(_ completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
         
-        fetchProductsFor(collection: RedMartDataSource(), completion: completion)
+        getAllSaleProductsService(collection: RedMartDataSource(), completion: completion)
         
     }
     
     
-    
-    func fetchNextPageForProductCollection(_ collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+    //MARK: - Pagination API Call
+    func getAllSaleProductsServicePagination(_ collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
         
         collection.redMartAllSalesPagination.pageIndex += 1
-        fetchProductsFor(collection: collection, completion: completion)
+        getAllSaleProductsService(collection: collection, completion: completion)
         
     }
     
-    //MARK:Private methods
-    
-    private func fetchProductsFor(collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+    //MARK: - Main API Skeleton
+    private func getAllSaleProductsService(collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
         
         let allSalesAPI = UrlConstants.productListAPI.appending("pageSize=\(collection.redMartAllSalesPagination.pageSize)&Page=\(collection.redMartAllSalesPagination.pageIndex)")
         Alamofire.request(allSalesAPI).validate().responseJSON { response in
@@ -67,7 +66,6 @@ class Service: NSObject{
                     else {
                         
                         guard let productList = json["products"].array else{
-                            //print("Invalid Product List")
                             return
                         }
                         
@@ -93,12 +91,6 @@ class Service: NSObject{
             
         }
         
-    }
-    
-    class JSONError: JSONDecodable {
-        required init(json: JSON) throws {
-            print("JSON ERROR")
-        }
     }
     
 }

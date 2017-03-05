@@ -10,6 +10,7 @@ import UIKit
 
 class RedmartPagination : NSObject{
     
+    //MARK: - Pagination variables
     var pageIndex = 0
     var pageSize = 30
     

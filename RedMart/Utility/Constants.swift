@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - Constants
 struct UrlConstants {
     
     static var productListAPI = "https://api.redmart.com/v1.5.7/catalog/search?theme=all-sales&"

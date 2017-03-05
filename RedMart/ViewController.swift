@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Service.sharedInstance().fetchProducts {(collection:RedMartDataSource?, error:Error?) -> Void in
+        Service.sharedInstance().getAllSaleProducts {(collection:RedMartDataSource?, error:Error?) -> Void in
             
         }
     }
