@@ -7,25 +7,89 @@
 //
 
 import Foundation
-import TRON
 import SwiftyJSON
+import Alamofire
+import TRON
 
-struct Service {
+class Service: NSObject{
     
-    let tron = TRON(baseURL: "https://api.redmart.com/v1.5.7/catalog/")
-    
-    static let sharedInstance = Service()
-    
-    func fetchHomeFeed(completion: @escaping (RedMartDataSource?, Error?) -> ()) {
+    private static var sharedService: Service = {
         
-        let request: APIRequest<RedMartDataSource, JSONError> = tron.request("search?theme=all-sales&pageSize=30&page=0")
+        let networkManager = Service()
+        return networkManager
         
-        request.perform(withSuccess: { (homeDatasource) in
-            completion(homeDatasource, nil)
-        }) { (err) in
+    }()
+    
+    class func sharedInstance() -> Service {
+        
+        return sharedService
+        
+    }
+    
+    func fetchProducts(_ completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+        
+        fetchProductsFor(collection: RedMartDataSource(), completion: completion)
+        
+    }
+    
+    
+    
+    func fetchNextPageForProductCollection(_ collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+        
+        collection.redMartAllSalesPagination.pageIndex += 1
+        fetchProductsFor(collection: collection, completion: completion)
+        
+    }
+    
+    //MARK:Private methods
+    
+    private func fetchProductsFor(collection:RedMartDataSource, completion:@escaping ((RedMartDataSource?, Error?) -> Void)) {
+        
+        let allSalesAPI = UrlConstants.productListAPI.appending("pageSize=\(collection.redMartAllSalesPagination.pageSize)&Page=\(collection.redMartAllSalesPagination.pageIndex)")
+        Alamofire.request(allSalesAPI).validate().responseJSON { response in
             
-            completion(nil, err)
+            switch response.result {
+                
+            case .success:
+                
+                if let data = response.data {
+                    
+                    let jsonError:NSErrorPointer? = nil
+                    let json = JSON(data: data, options:JSONSerialization.ReadingOptions.allowFragments, error: jsonError!)
+                    
+                    if let jsonError = jsonError {
+                        
+                        completion(nil, jsonError as? Error)
+                        
+                    }
+                    else {
+                        
+                        if let productList = json["products"].array {
+                            
+                            for productJson in productList {
+                                
+                                let product = RedMartAllSalesProducts(json: productJson)
+                                collection.redMartAllSalesProducts.append(product)
+                                
+                            }
+                            
+                        }
+                        
+                        completion(collection, nil)
+                        
+                    }
+                    
+                }
+                
+            case.failure(let error):
+                
+                completion(nil, error)
+                
+            }
+            
+            
         }
+        
     }
     
     class JSONError: JSONDecodable {

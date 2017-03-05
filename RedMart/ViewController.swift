@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Service.sharedInstance().fetchProducts {(collection:RedMartDataSource?, error:Error?) -> Void in
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import TRON
-import SwiftyJSON
 
-class RedMartDataSource: JSONDecodable {
+class RedMartDataSource: NSObject {
     
-    required init(json: JSON) throws {
-    }
+    var redMartAllSalesProducts = [RedMartAllSalesProducts]()
+    var redMartAllSalesPagination = RedmartPagination()
+    
 }
