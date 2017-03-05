@@ -13,13 +13,12 @@
 		3E30C8021E6A930D005C8C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E30C7FF1E6A930D005C8C95 /* Main.storyboard */; };
 		3E30C8051E6C8548005C8C95 /* RedMartAllSalesProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C8041E6C8548005C8C95 /* RedMartAllSalesProducts.swift */; };
 		3E30C8071E6C8561005C8C95 /* RedmartPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C8061E6C8561005C8C95 /* RedmartPagination.swift */; };
-		3E30C80C1E6C942A005C8C95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C80B1E6C942A005C8C95 /* Constants.swift */; };
+		3E30C8101E6C970E005C8C95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C80F1E6C970E005C8C95 /* Constants.swift */; };
 		55B591CD14799E4BE0891263 /* Pods_RedMart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65915DB5268DEDE915F008ED /* Pods_RedMart.framework */; };
 		8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E641E63CD270033F4E3 /* AppDelegate.swift */; };
 		8BB35E6C1E63CD270033F4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */; };
 		8BB35E7A1E63CD270033F4E3 /* RedMartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E791E63CD270033F4E3 /* RedMartTests.swift */; };
 		8BB35E851E63CD270033F4E3 /* RedMartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E841E63CD270033F4E3 /* RedMartUITests.swift */; };
-		8BB35E931E63CEF80033F4E3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E921E63CEF80033F4E3 /* README.md */; };
 		8BB35E961E63CFBA0033F4E3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E951E63CFBA0033F4E3 /* .gitignore */; };
 		8BB35E9C1E648D4B0033F4E3 /* RedMartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E9B1E648D4B0033F4E3 /* RedMartService.swift */; };
 		8BB35E9F1E649F0B0033F4E3 /* RedMartDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E9E1E649F0B0033F4E3 /* RedMartDataSource.swift */; };
@@ -50,7 +49,7 @@
 		3E30C8001E6A930D005C8C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RedMart/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		3E30C8041E6C8548005C8C95 /* RedMartAllSalesProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedMartAllSalesProducts.swift; sourceTree = "<group>"; };
 		3E30C8061E6C8561005C8C95 /* RedmartPagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartPagination.swift; sourceTree = "<group>"; };
-		3E30C80B1E6C942A005C8C95 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E30C80F1E6C970E005C8C95 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		40FD26B867007AC4C3777092 /* Pods-RedMartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedMartTests/Pods-RedMartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4249FDA1C520A983A05DA19B /* Pods-RedMartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedMartUITests/Pods-RedMartUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65915DB5268DEDE915F008ED /* Pods_RedMart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +115,7 @@
 		3E30C80A1E6C941A005C8C95 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				3E30C80B1E6C942A005C8C95 /* Constants.swift */,
+				3E30C80F1E6C970E005C8C95 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -356,7 +355,6 @@
 				8BB35E961E63CFBA0033F4E3 /* .gitignore in Resources */,
 				8BB35E6C1E63CD270033F4E3 /* Assets.xcassets in Resources */,
 				3E30C8021E6A930D005C8C95 /* Main.storyboard in Resources */,
-				8BB35E931E63CEF80033F4E3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,9 +521,9 @@
 				3E30C8071E6C8561005C8C95 /* RedmartPagination.swift in Sources */,
 				8BB35E9F1E649F0B0033F4E3 /* RedMartDataSource.swift in Sources */,
 				3E30C8051E6C8548005C8C95 /* RedMartAllSalesProducts.swift in Sources */,
+				3E30C8101E6C970E005C8C95 /* Constants.swift in Sources */,
 				8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */,
 				8BB35E9C1E648D4B0033F4E3 /* RedMartService.swift in Sources */,
-				3E30C80C1E6C942A005C8C95 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
