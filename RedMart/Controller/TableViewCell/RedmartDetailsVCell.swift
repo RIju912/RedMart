@@ -10,6 +10,7 @@ import UIKit
 
 class RedmartDetailsVCell: UITableViewCell {
 
+    //MARK: - Outlets
     @IBOutlet weak var iboDeatilsTextView: UITextView!
     
     override func awakeFromNib() {
@@ -18,9 +19,10 @@ class RedmartDetailsVCell: UITableViewCell {
         
     }
     
+    //MARK: - Cell Setup
     func setupCellFor(product: RedMartAllSalesProducts) {
         
-        iboDeatilsTextView.text = product.details ?? ""
+        iboDeatilsTextView.text = product.details ?? UrlConstants.notApplicable
         
     }
 

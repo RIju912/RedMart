@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-//TO-DO,Removal of cached responses on demand.Whenever app requests for purge memory
-//Or on every fresh launch of App
-//Cache policy?
 public extension UIImageView {
     fileprivate func setImageData(_ cachedResponse:CachedURLResponse?,placeHolder:String?) {
         //UI operation,Should be over main thread.

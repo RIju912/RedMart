@@ -8,18 +8,23 @@
 
 import UIKit
 
+
 class RedmartDetailsCollectionVCell: UICollectionViewCell {
     
+    //MARK: - Outlets
     @IBOutlet weak var iboCoverImageView: UIImageView!
     @IBOutlet weak var iboProductNameLabel: UILabel!
     @IBOutlet weak var iboPriceLabel: UILabel!
+    @IBOutlet weak var iboStockMeasure: UILabel!
     
+    //MARK: - Cell Setup
     func setupCellForProduct(product: RedMartAllSalesProducts)  {
         
         iboCoverImageView.setImageFromURL((product.coverImage ?? ""), placeHolder: nil)
         iboCoverImageView.clipsToBounds = true
-        iboProductNameLabel.text = product.title ?? ""
-        iboPriceLabel.text = product.price ?? ""
+        iboProductNameLabel.text = product.title ?? UrlConstants.notApplicable
+        iboPriceLabel.text = product.price ?? UrlConstants.notApplicable
+        iboStockMeasure.text = product.stockMeasure ?? UrlConstants.notApplicable
         
     }
     

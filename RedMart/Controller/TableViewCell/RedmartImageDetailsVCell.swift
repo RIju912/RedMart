@@ -10,6 +10,7 @@ import UIKit
 
 class RedmartImageDetailsVCell: UITableViewCell {
 
+    //MARK: - Outlets
     @IBOutlet weak var iboProductImageView: UIImageView!
     
     override func awakeFromNib() {
@@ -19,6 +20,7 @@ class RedmartImageDetailsVCell: UITableViewCell {
         
     }
     
+    //MARK: - Cell Setup
     func setupCellFor(product: RedMartAllSalesProducts) {
         
         iboProductImageView.setImageFromURL(product.coverImage ?? "", placeHolder: nil)

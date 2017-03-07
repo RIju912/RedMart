@@ -14,31 +14,29 @@ var reachability = Reachability()
 
 class RedmartAllSalesVC: UIViewController, NVActivityIndicatorViewable {
 
+    //MARK: - Outlets
     @IBOutlet weak var iboCollectionview: UICollectionView!
     
+    //MARK: - Variables
     var productCollectionRedmart: RedMartDataSource?
     let productCellID = "RedmartProductCell"
     let footerHeight: CGFloat = 44.0
     let collectionViewTopSpaceInset: CGFloat = 16.0
     let refreshControl = UIRefreshControl()
     let size = CGSize(width: 30, height: 30)
-    
     var collectionFooterView: UIView?
     
     
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshControl.addTarget(self, action: #selector(RedmartAllSalesVC.pullToRefresh), for: .valueChanged)
-        iboCollectionview.addSubview(refreshControl)
-        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityStatusChanged(_:)), name: .reachabilityChanged, object: nil)
+        self.viewSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //Check for Internet
-        startAnimating(size, message: "Please wait...", type: NVActivityIndicatorType(rawValue: 30)!)
         
-        updateInterfaceWithCurrent(networkStatus: reachability.currentReachabilityStatus())
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,11 +56,25 @@ class RedmartAllSalesVC: UIViewController, NVActivityIndicatorViewable {
         return
     }
     
+    //MARK: - View Setup
+    func viewSetup(){
+        
+        refreshControl.addTarget(self, action: #selector(RedmartAllSalesVC.pullToRefresh), for: .valueChanged)
+        iboCollectionview.addSubview(refreshControl)
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityStatusChanged(_:)), name: .reachabilityChanged, object: nil)
+        startAnimating(size, message: "Please wait...", type: NVActivityIndicatorType(rawValue: 30)!)
+        updateInterfaceWithCurrent(networkStatus: reachability.currentReachabilityStatus())
+    }
+    
+    //MARK: - Reachbility via API Call & Data loading
     func updateInterfaceWithCurrent(networkStatus: NetworkStatus) {
         switch networkStatus {
         case NotReachable:
-            view.backgroundColor = .red
-            print("No Internet")
+            self.showAlertMessage("Sorry, no internet connections available.")
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
+                self.stopAnimating()
+            }
+            return
         case ReachableViaWiFi:
             self.loadAllSalesData()
         case ReachableViaWWAN:
@@ -97,6 +109,7 @@ class RedmartAllSalesVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    //MARK: - Pagination Displaycell Helper
     func shouldLoadNewPage(_ indexPath : IndexPath) -> Bool {
         
         if (indexPath.row + 1 ==  productCollectionRedmart?.redMartAllSalesProducts.count) {
@@ -109,6 +122,7 @@ class RedmartAllSalesVC: UIViewController, NVActivityIndicatorViewable {
         
     }
     
+    //MARK: - Pagaination activityIndicator
     func setCollectionViewFooterLoadingIndicatorView(_ activityIndicator: Bool) -> () {
         
         if activityIndicator {
@@ -146,7 +160,7 @@ class RedmartAllSalesVC: UIViewController, NVActivityIndicatorViewable {
 
 extension RedmartAllSalesVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //MARK:Collectionview datasources
+    //MARK: - Collectionview datasources
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -175,7 +189,7 @@ extension RedmartAllSalesVC: UICollectionViewDelegate, UICollectionViewDataSourc
         
     }
     
-    //MARK:Collectionview delegates
+    //MARK: - Collectionview delegates
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let transition = CATransition()
@@ -220,7 +234,7 @@ extension RedmartAllSalesVC: UICollectionViewDelegate, UICollectionViewDataSourc
         
         let numberOfCell: CGFloat = 3
         let cellWidth = ((iboCollectionview.bounds.size.width) / numberOfCell) - 8.0
-        return CGSize(width:cellWidth, height:cellWidth + (0.5 * cellWidth))
+        return CGSize(width:cellWidth, height:cellWidth + (1.4 * cellWidth))
         
         
     }

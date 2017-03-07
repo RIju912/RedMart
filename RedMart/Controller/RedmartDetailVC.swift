@@ -10,9 +10,13 @@ import UIKit
 
 class RedmartDetailVC: UIViewController {
 
+    //MARK: - Variables
     var allProducts: RedMartAllSalesProducts?
     
+    //MARK: - Outlets
     @IBOutlet weak var iboProductDetails: UILabel!
+    
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         iboProductDetails.text = allProducts?.title
@@ -24,6 +28,7 @@ class RedmartDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - IBAction
     @IBAction func ibaBackButtonPressed(_ sender: UIButton) {
         let transition = CATransition()
         transition.duration = 0.8
@@ -39,6 +44,8 @@ class RedmartDetailVC: UIViewController {
 }
 
 extension RedmartDetailVC: UITableViewDataSource, UITableViewDelegate {
+    
+    //MARK: - Tableviewview datasources
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -86,7 +93,7 @@ extension RedmartDetailVC: UITableViewDataSource, UITableViewDelegate {
             return 250.0
             
         case 1:
-            return 30.0
+            return 150.0
             
         case 2:
             

@@ -22,6 +22,8 @@ class RedMartAllSalesProducts: NSObject{
     var images: [String]?
     var lifeTime: String?
     var price: String?
+    var merchantName : String?
+    var merchantLogo : String?
     var stockStatus: Int?
     var stockMeasure: String?
     
@@ -30,66 +32,18 @@ class RedMartAllSalesProducts: NSObject{
         
         super.init()
         
-        if let prodID = json["id"].string{
-            id = prodID
-        }else{
-            id = UrlConstants.notApplicable
-        }
-        
-        
-        if let prodSku = json["sku"].string{
-            sku = prodSku
-        }else{
-            sku = UrlConstants.notApplicable
-        }
-        
-        
-        if let prodStatus = json["details"]["status"].int{
-            status = prodStatus
-        }else{
-            status = UrlConstants.notApplicableInteger
-        }
-        
-        
-        if let prodTitle = json["title"].string{
-            title = prodTitle
-        }else{
-            title = UrlConstants.notApplicable
-        }
-        
-        
-        if let prodDetails = json["desc"].string{
-            details = prodDetails
-        }else{
-            details = UrlConstants.notApplicable
-        }
-        
-        
+        id = json["id"].stringValue
+        sku = json["sku"].stringValue
+        status = json["details"]["status"].int
+        title = json["title"].stringValue
+        details = json["desc"].stringValue
         coverImage = UrlConstants.productImageAPI.appending(json["img"]["name"].stringValue)
-        
-        
-        if let prodLifeTime = json["product_life"]["time"].int, let prodLifeMetric = json["products"]["product_life"]["metric"].string{
-            lifeTime = "\(prodLifeTime)" + prodLifeMetric
-        }else{
-            lifeTime = UrlConstants.notApplicable
-        }
-        
+        lifeTime = "\(json["product_life"]["time"].int)" + json["products"]["product_life"]["metric"].stringValue
         price = "$"+json["pricing"]["price"].stringValue
-        
-        
-        if let prodStockStatus = json["inventory"]["stock_status"].int{
-            stockStatus = prodStockStatus
-        }else{
-            stockStatus = UrlConstants.notApplicableInteger
-        }
-        
-        
-        if let prodStockM = json["measure"]["wt_or_vol"].string{
-            stockMeasure = prodStockM
-        }else {
-            stockMeasure = UrlConstants.notApplicable
-        }
-        
+        merchantName = json["merchant"]["sub_vendor_name"].stringValue
+        merchantLogo = UrlConstants.productImageAPI.appending(json["merchant"]["sub_vendor_logo"]["name"].stringValue)
+        stockStatus = json["inventory"]["stock_status"].int
+        stockMeasure = json["measure"]["wt_or_vol"].stringValue
         
         if let imageList = json["images"].array{
             for image in imageList {
