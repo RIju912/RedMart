@@ -25,7 +25,15 @@ class RedmartDetailVC: UIViewController {
     }
     
     @IBAction func ibaBackButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.8
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromBottom
+        self.navigationController!.view.layer.add(transition, forKey: nil)
+        let storyBoardDetail : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let secondViewController = storyBoardDetail.instantiateViewController(withIdentifier: "RedmartAllSales") as! RedmartAllSalesVC
+        self.navigationController?.pushViewController(secondViewController, animated: false)
     }
 
 }

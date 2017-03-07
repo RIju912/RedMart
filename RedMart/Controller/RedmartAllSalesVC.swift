@@ -178,11 +178,16 @@ extension RedmartAllSalesVC: UICollectionViewDelegate, UICollectionViewDataSourc
     //MARK:Collectionview delegates
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let transition = CATransition()
+        transition.duration = 0.8
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionFade
+        transition.subtype = kCATransitionFromBottom
+        self.navigationController!.view.layer.add(transition, forKey: nil)
         let storyBoardDetail : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let secondViewController = storyBoardDetail.instantiateViewController(withIdentifier: "RedmartDetail") as! RedmartDetailVC
         secondViewController.allProducts = productCollectionRedmart?.redMartAllSalesProducts[indexPath.row]
-        self.present(secondViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(secondViewController, animated: false)
         
     }
     
