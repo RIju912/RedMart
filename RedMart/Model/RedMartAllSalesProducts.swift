@@ -65,11 +65,7 @@ class RedMartAllSalesProducts: NSObject{
         }
         
         
-        if let prodImage = json["img"]["name"].string{
-            coverImage = UrlConstants.productImageAPI.appending(prodImage)
-        }else{
-            coverImage = UrlConstants.notApplicable
-        }
+        coverImage = UrlConstants.productImageAPI.appending(json["img"]["name"].stringValue)
         
         
         if let prodLifeTime = json["product_life"]["time"].int, let prodLifeMetric = json["products"]["product_life"]["metric"].string{
@@ -78,12 +74,7 @@ class RedMartAllSalesProducts: NSObject{
             lifeTime = UrlConstants.notApplicable
         }
         
-        
-        if let prodPrice = json["pricing"]["price"].string{
-            price = "$"+prodPrice
-        }else{
-            price = UrlConstants.notApplicable
-        }
+        price = "$"+json["pricing"]["price"].stringValue
         
         
         if let prodStockStatus = json["inventory"]["stock_status"].int{

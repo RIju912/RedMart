@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - NVActivityIndicatorView (3.5.1)
   - SwiftyJSON (3.1.4)
   - TRON (2.0.1):
     - Alamofire (~> 4.1)
@@ -12,13 +13,15 @@ PODS:
     - TRON/Core
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - TRON (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  NVActivityIndicatorView: 075563b3547445ebcff840e3297ce9dd4a23731f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TRON: 7b9adeb678fe0e25433d207f6a734aaf145fa9b5
 
-PODFILE CHECKSUM: 20a923b9ba645a4700463017eb6bfac074944b1d
+PODFILE CHECKSUM: 11597a4f76090eea62d6b7a8fbbb141e0339fd89
 
 COCOAPODS: 1.2.0

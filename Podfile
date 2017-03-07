@@ -10,6 +10,7 @@ target 'RedMart' do
 use_frameworks!
 
 pod 'TRON', '~> 2.0.0'
+pod 'NVActivityIndicatorView'
 
 end
 

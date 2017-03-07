@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        reachability = Reachability.forInternetConnection()
+        reachability.startNotifier()
+        /*************************Disable autolayout constraint error messages*******************************/
+        UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+        /*************************Disable autolayout constraint error messages*******************************/
         return true
     }
 

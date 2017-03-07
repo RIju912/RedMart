@@ -14,6 +14,15 @@
 		3E30C8051E6C8548005C8C95 /* RedMartAllSalesProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C8041E6C8548005C8C95 /* RedMartAllSalesProducts.swift */; };
 		3E30C8071E6C8561005C8C95 /* RedmartPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C8061E6C8561005C8C95 /* RedmartPagination.swift */; };
 		3E30C8101E6C970E005C8C95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E30C80F1E6C970E005C8C95 /* Constants.swift */; };
+		3EF9B6F01E6F165100741A77 /* UIImageView+LazyLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B6EF1E6F165100741A77 /* UIImageView+LazyLoader.swift */; };
+		3EF9B6F51E6F1D6300741A77 /* RedmartAllSalesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B6F41E6F1D6300741A77 /* RedmartAllSalesVC.swift */; };
+		3EF9B6F71E6F272900741A77 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF9B6F61E6F272900741A77 /* SystemConfiguration.framework */; };
+		3EF9B6FE1E6F29BE00741A77 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B6FD1E6F29BE00741A77 /* Reachability.m */; };
+		3EF9B7001E6F2DDA00741A77 /* RedmartDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B6FF1E6F2DDA00741A77 /* RedmartDetailVC.swift */; };
+		3EF9B7031E6F2FF700741A77 /* RedmartInfoTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B7021E6F2FF700741A77 /* RedmartInfoTableVCell.swift */; };
+		3EF9B7051E6F302200741A77 /* RedmartDetailsVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B7041E6F302200741A77 /* RedmartDetailsVCell.swift */; };
+		3EF9B7071E6F303E00741A77 /* RedmartImageDetailsVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B7061E6F303E00741A77 /* RedmartImageDetailsVCell.swift */; };
+		3EF9B70B1E6F314900741A77 /* RedmartDetailsCollectionVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9B70A1E6F314900741A77 /* RedmartDetailsCollectionVCell.swift */; };
 		55B591CD14799E4BE0891263 /* Pods_RedMart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65915DB5268DEDE915F008ED /* Pods_RedMart.framework */; };
 		8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB35E641E63CD270033F4E3 /* AppDelegate.swift */; };
 		8BB35E6C1E63CD270033F4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB35E6B1E63CD270033F4E3 /* Assets.xcassets */; };
@@ -50,6 +59,17 @@
 		3E30C8041E6C8548005C8C95 /* RedMartAllSalesProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedMartAllSalesProducts.swift; sourceTree = "<group>"; };
 		3E30C8061E6C8561005C8C95 /* RedmartPagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartPagination.swift; sourceTree = "<group>"; };
 		3E30C80F1E6C970E005C8C95 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3EF9B6EF1E6F165100741A77 /* UIImageView+LazyLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LazyLoader.swift"; sourceTree = "<group>"; };
+		3EF9B6F41E6F1D6300741A77 /* RedmartAllSalesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartAllSalesVC.swift; sourceTree = "<group>"; };
+		3EF9B6F61E6F272900741A77 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3EF9B6FB1E6F29BD00741A77 /* RedMart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedMart-Bridging-Header.h"; sourceTree = "<group>"; };
+		3EF9B6FC1E6F29BE00741A77 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3EF9B6FD1E6F29BE00741A77 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3EF9B6FF1E6F2DDA00741A77 /* RedmartDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartDetailVC.swift; sourceTree = "<group>"; };
+		3EF9B7021E6F2FF700741A77 /* RedmartInfoTableVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartInfoTableVCell.swift; sourceTree = "<group>"; };
+		3EF9B7041E6F302200741A77 /* RedmartDetailsVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartDetailsVCell.swift; sourceTree = "<group>"; };
+		3EF9B7061E6F303E00741A77 /* RedmartImageDetailsVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartImageDetailsVCell.swift; sourceTree = "<group>"; };
+		3EF9B70A1E6F314900741A77 /* RedmartDetailsCollectionVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedmartDetailsCollectionVCell.swift; sourceTree = "<group>"; };
 		40FD26B867007AC4C3777092 /* Pods-RedMartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedMartTests/Pods-RedMartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4249FDA1C520A983A05DA19B /* Pods-RedMartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedMartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedMartUITests/Pods-RedMartUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65915DB5268DEDE915F008ED /* Pods_RedMart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedMart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF9B6F71E6F272900741A77 /* SystemConfiguration.framework in Frameworks */,
 				55B591CD14799E4BE0891263 /* Pods_RedMart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +126,7 @@
 		1EAE40E0C23F461676C44A59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9B6F61E6F272900741A77 /* SystemConfiguration.framework */,
 				65915DB5268DEDE915F008ED /* Pods_RedMart.framework */,
 				7366E036E880448716EA096C /* libPods-RedMartTests.a */,
 				3A9A917984BFF30D1BBE6D6B /* libPods-RedMartUITests.a */,
@@ -116,8 +138,59 @@
 			isa = PBXGroup;
 			children = (
 				3E30C80F1E6C970E005C8C95 /* Constants.swift */,
+				3EF9B6EF1E6F165100741A77 /* UIImageView+LazyLoader.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		3EF9B6F31E6F1D4700741A77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E30C7FB1E6A92E9005C8C95 /* ViewController.swift */,
+				3EF9B6F41E6F1D6300741A77 /* RedmartAllSalesVC.swift */,
+				3EF9B6FF1E6F2DDA00741A77 /* RedmartDetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3EF9B6F81E6F285B00741A77 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9B6FC1E6F29BE00741A77 /* Reachability.h */,
+				3EF9B6FD1E6F29BE00741A77 /* Reachability.m */,
+				3EF9B6FB1E6F29BD00741A77 /* RedMart-Bridging-Header.h */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		3EF9B7011E6F2F8400741A77 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9B7021E6F2FF700741A77 /* RedmartInfoTableVCell.swift */,
+				3EF9B7041E6F302200741A77 /* RedmartDetailsVCell.swift */,
+				3EF9B7061E6F303E00741A77 /* RedmartImageDetailsVCell.swift */,
+			);
+			name = TableViewCell;
+			path = RedMart/Controller/TableViewCell;
+			sourceTree = SOURCE_ROOT;
+		};
+		3EF9B7081E6F30DA00741A77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9B7091E6F311700741A77 /* CollectionViewCells */,
+				3EF9B7011E6F2F8400741A77 /* TableViewCell */,
+				3E30C7FD1E6A930C005C8C95 /* LaunchScreen.storyboard */,
+				3E30C7FF1E6A930D005C8C95 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3EF9B7091E6F311700741A77 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3EF9B70A1E6F314900741A77 /* RedmartDetailsCollectionVCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		8BB35E581E63CD270033F4E3 = {
@@ -145,11 +218,12 @@
 		8BB35E631E63CD270033F4E3 /* RedMart */ = {
 			isa = PBXGroup;
 			children = (
+				3EF9B7081E6F30DA00741A77 /* Views */,
+				3EF9B6F81E6F285B00741A77 /* Reachability */,
+				3EF9B6F31E6F1D4700741A77 /* Controller */,
 				3E30C80A1E6C941A005C8C95 /* Utility */,
 				8BB35E9D1E6494130033F4E3 /* Model */,
 				8BB35E9A1E648D1F0033F4E3 /* Service */,
-				8BB35E991E63D2F10033F4E3 /* ViewControllers */,
-				8BB35E981E63D2CB0033F4E3 /* Views and Storyboards */,
 				8BB35E941E63CFA40033F4E3 /* AppResources */,
 			);
 			path = RedMart;
@@ -183,23 +257,6 @@
 				8BB35E701E63CD270033F4E3 /* Info.plist */,
 			);
 			path = AppResources;
-			sourceTree = "<group>";
-		};
-		8BB35E981E63D2CB0033F4E3 /* Views and Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				3E30C7FD1E6A930C005C8C95 /* LaunchScreen.storyboard */,
-				3E30C7FF1E6A930D005C8C95 /* Main.storyboard */,
-			);
-			path = "Views and Storyboards";
-			sourceTree = "<group>";
-		};
-		8BB35E991E63D2F10033F4E3 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3E30C7FB1E6A92E9005C8C95 /* ViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8BB35E9A1E648D1F0033F4E3 /* Service */ = {
@@ -310,6 +367,7 @@
 				TargetAttributes = {
 					8BB35E601E63CD270033F4E3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					8BB35E741E63CD270033F4E3 = {
@@ -520,10 +578,18 @@
 				3E30C7FC1E6A92E9005C8C95 /* ViewController.swift in Sources */,
 				3E30C8071E6C8561005C8C95 /* RedmartPagination.swift in Sources */,
 				8BB35E9F1E649F0B0033F4E3 /* RedMartDataSource.swift in Sources */,
+				3EF9B7031E6F2FF700741A77 /* RedmartInfoTableVCell.swift in Sources */,
+				3EF9B7051E6F302200741A77 /* RedmartDetailsVCell.swift in Sources */,
+				3EF9B6FE1E6F29BE00741A77 /* Reachability.m in Sources */,
+				3EF9B6F51E6F1D6300741A77 /* RedmartAllSalesVC.swift in Sources */,
 				3E30C8051E6C8548005C8C95 /* RedMartAllSalesProducts.swift in Sources */,
 				3E30C8101E6C970E005C8C95 /* Constants.swift in Sources */,
+				3EF9B6F01E6F165100741A77 /* UIImageView+LazyLoader.swift in Sources */,
 				8BB35E651E63CD270033F4E3 /* AppDelegate.swift in Sources */,
+				3EF9B70B1E6F314900741A77 /* RedmartDetailsCollectionVCell.swift in Sources */,
+				3EF9B7071E6F303E00741A77 /* RedmartImageDetailsVCell.swift in Sources */,
 				8BB35E9C1E648D4B0033F4E3 /* RedMartService.swift in Sources */,
+				3EF9B7001E6F2DDA00741A77 /* RedmartDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +631,8 @@
 				3E30C7FE1E6A930C005C8C95 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = "RedMart/Views and Storyboards";
+			sourceTree = SOURCE_ROOT;
 		};
 		3E30C7FF1E6A930D005C8C95 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -573,7 +640,8 @@
 				3E30C8001E6A930D005C8C95 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = "RedMart/Views and Storyboards";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -674,11 +742,14 @@
 			baseConfigurationReference = C83327075350B7BDAE1972AB /* Pods-RedMart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RedMart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.RedMart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedMart/Reachability/RedMart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -688,11 +759,13 @@
 			baseConfigurationReference = 73327B5D772AED14001C5E05 /* Pods-RedMart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RedMart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abc.RedMart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedMart/Reachability/RedMart-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

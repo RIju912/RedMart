@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //MARK: - Constants
 struct UrlConstants {
@@ -15,6 +16,14 @@ struct UrlConstants {
     static var productImageAPI = "http://media.redmart.com/newmedia/200p"
     static var notApplicable = "N/A"
     static var notApplicableInteger = 0
+    
+}
+
+extension UIColor {
+    
+    class func redMartBGColor () -> UIColor {
+        return UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
+    }
     
 }
 

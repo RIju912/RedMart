@@ -13,10 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Service.sharedInstance().getAllSaleProducts {(collection:RedMartDataSource?, error:Error?) -> Void in
-            
-        }
     }
 
     override func didReceiveMemoryWarning() {
