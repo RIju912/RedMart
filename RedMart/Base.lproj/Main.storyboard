@@ -39,12 +39,21 @@
                                 <color key="textColor" red="0.96265786919999996" green="0.127065765" blue="0.1528050161" alpha="0.72180347710000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="4he-FF-AvH">
+                                <rect key="frame" x="134" y="227" width="108" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Oq7-M3-wXc"/>
+                                    <constraint firstAttribute="width" constant="108" id="xca-od-Rnr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BMK-DZ-9HT" firstAttribute="centerX" secondItem="OYO-Cr-bDt" secondAttribute="centerX" id="ENr-CO-rwD"/>
                             <constraint firstItem="5Km-NG-b7Z" firstAttribute="leading" secondItem="OYO-Cr-bDt" secondAttribute="leading" id="GcT-ro-b5g"/>
+                            <constraint firstItem="BMK-DZ-9HT" firstAttribute="top" secondItem="4he-FF-AvH" secondAttribute="bottom" constant="8.5" id="H39-Dc-9XJ"/>
                             <constraint firstItem="5Km-NG-b7Z" firstAttribute="height" secondItem="OYO-Cr-bDt" secondAttribute="height" multiplier="0.1" id="N57-Xy-yXC"/>
+                            <constraint firstItem="4he-FF-AvH" firstAttribute="centerX" secondItem="BMK-DZ-9HT" secondAttribute="centerX" id="ZRu-sf-xTB"/>
                             <constraint firstItem="BMK-DZ-9HT" firstAttribute="centerY" secondItem="OYO-Cr-bDt" secondAttribute="centerY" id="osU-Pb-PuG"/>
                             <constraint firstAttribute="trailing" secondItem="5Km-NG-b7Z" secondAttribute="trailing" id="rd0-SX-afq"/>
                             <constraint firstItem="iTA-BO-cQi" firstAttribute="top" secondItem="5Km-NG-b7Z" secondAttribute="bottom" id="wGQ-KU-5CL"/>
@@ -129,6 +138,9 @@
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1n-ik-pmK">
                                                             <rect key="frame" x="0.0" y="268" width="298" height="30"/>
                                                             <color key="backgroundColor" red="0.96265786919999996" green="0.127065765" blue="0.1528050161" alpha="0.72180347710000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="q6l-yr-0Wa"/>
+                                                            </constraints>
                                                             <state key="normal" title="View Details">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
@@ -263,19 +275,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiX-lc-iBS">
-                                                    <rect key="frame" x="2" y="2" width="371" height="207"/>
-                                                </imageView>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeN-5M-o5J">
+                                                    <rect key="frame" x="4" y="0.0" width="367" height="211"/>
+                                                </scrollView>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SKE-Fn-M3F">
+                                                    <rect key="frame" x="168" y="169" width="39" height="37"/>
+                                                </pageControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MiX-lc-iBS" firstAttribute="leading" secondItem="uHJ-N0-pVz" secondAttribute="leading" constant="2" id="Osp-oV-v2s"/>
-                                                <constraint firstItem="MiX-lc-iBS" firstAttribute="top" secondItem="uHJ-N0-pVz" secondAttribute="top" constant="2" id="Zek-YQ-b24"/>
-                                                <constraint firstAttribute="trailing" secondItem="MiX-lc-iBS" secondAttribute="trailing" constant="2" id="aQ8-HG-7Pj"/>
-                                                <constraint firstAttribute="bottom" secondItem="MiX-lc-iBS" secondAttribute="bottom" constant="2" id="fwh-iW-Acu"/>
+                                                <constraint firstAttribute="trailing" secondItem="eeN-5M-o5J" secondAttribute="trailing" constant="4" id="1wl-kF-QXE"/>
+                                                <constraint firstItem="SKE-Fn-M3F" firstAttribute="centerX" secondItem="uHJ-N0-pVz" secondAttribute="centerX" id="H5N-P1-KaU"/>
+                                                <constraint firstAttribute="bottom" secondItem="eeN-5M-o5J" secondAttribute="bottom" id="HbW-Kx-PYw"/>
+                                                <constraint firstItem="eeN-5M-o5J" firstAttribute="leading" secondItem="uHJ-N0-pVz" secondAttribute="leading" constant="4" id="f2z-u1-NTa"/>
+                                                <constraint firstAttribute="bottom" secondItem="SKE-Fn-M3F" secondAttribute="bottom" constant="5" id="hAs-y7-yxh"/>
+                                                <constraint firstItem="eeN-5M-o5J" firstAttribute="top" secondItem="uHJ-N0-pVz" secondAttribute="top" id="uMV-ak-2sa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="iboProductImageView" destination="MiX-lc-iBS" id="i5W-Eu-F5h"/>
+                                            <outlet property="iboPageControl" destination="SKE-Fn-M3F" id="jKU-5Z-OEX"/>
+                                            <outlet property="iboScrollView" destination="eeN-5M-o5J" id="8GV-j0-hKB"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RedmartInfoTableVCell" id="aoJ-3B-VlF" customClass="RedmartInfoTableVCell" customModule="RedMart" customModuleProvider="target">
@@ -424,14 +442,6 @@
             </objects>
             <point key="canvasLocation" x="2660" y="-630.58470764617698"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="aF0-GU-ovQ">
-            <objects>
-                <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="WGa-t4-ToD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nKC-9L-J1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2473" y="30"/>
-        </scene>
         <!--Image Page ContentVC-->
         <scene sceneID="Eeo-f1-7e2">
             <objects>
@@ -484,6 +494,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="300" height="300"/>
         <image name="back" width="18" height="17"/>
         <image name="settings" width="16" height="16"/>
     </resources>

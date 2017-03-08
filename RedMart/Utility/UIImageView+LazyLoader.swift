@@ -34,7 +34,7 @@ public extension UIImageView {
     }
     
     func setImageFromURL(_ urlString:String,placeHolder:String?) {
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.background).async(execute: { () -> Void in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { () -> Void in
             if let url =  URL(string: urlString) {
                 let request = URLRequest(url: url)
                 

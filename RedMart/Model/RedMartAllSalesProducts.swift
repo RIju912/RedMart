@@ -19,7 +19,7 @@ class RedMartAllSalesProducts: NSObject{
     var title: String?
     var details: String?
     var coverImage:String?
-    var images: [String]?
+    var images = [String]()
     var lifeTime: String?
     var price: String?
     var merchantName : String?
@@ -48,7 +48,7 @@ class RedMartAllSalesProducts: NSObject{
         if let imageList = json["images"].array{
             for image in imageList {
                 
-                images?.append(UrlConstants.productImageAPI.appending(image["name"].stringValue))
+                images.append(UrlConstants.productImageAPI.appending(image["name"].stringValue))
             }
         }else{
             images = []

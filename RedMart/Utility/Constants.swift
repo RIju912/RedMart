@@ -40,3 +40,18 @@ extension UIViewController {
     
 }
 
+//*******************Extension to handle Optional value************************//
+extension Optional {
+    func or(_ defaultValue: Wrapped) -> Wrapped {
+        if self == nil{
+            return defaultValue
+        }
+        else if self is NSNull{
+            return defaultValue
+        }else{
+            return self!
+        }
+    }
+}
+//*******************Extension to handle Optional value************************//
+
